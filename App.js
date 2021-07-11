@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+{/* We will be importing colours, header and list item from components folder with respective file */}
 import { Colours } from './components/Colours'
 import { Header } from './components/Header'
 import { List } from './components/List'
 
+{/* The name of the app will be My ToDo List */}
 const appDefintion = {
   name: "My ToDo List",
 }
@@ -19,11 +20,11 @@ export default function App() {
 
   useEffect(() => {
     if (!data) {
-      // read from storage
-      // setData( data from storage )
+      // read from database
+      // setData( data from database )
     }
     else {
-      // save into storage
+      // save into database
     }
   }, [data])
 
@@ -40,7 +41,7 @@ export default function App() {
         item.status = true
       }
     })
-    // set the items array as the data
+    // Data will pass as array
     setData(items)
   }
 
